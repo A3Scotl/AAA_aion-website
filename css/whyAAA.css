@@ -233,8 +233,9 @@ header.scroll_nav{
     font-size: 6.5rem;
 }
 .ctn2{
-    background-image: url("/img/whyAAA-bg-ctn2.jpeg");
+    background-image: url("C:/Users/admin/Desktop/Năm 2/Lập trình web/LTWWeb_DoAnCuoiKy/AAA_aion-website/img/whyAAA-bg-ctn2.jpeg");
     height: 750px;
+    background-color: black;
 }
 .ctn2,.ctn4{
     background-size: contain cover;
@@ -292,6 +293,14 @@ header.scroll_nav{
     background-color: #010101;
     height: 600px;
 }
+.ctn5 div{
+    background-image: linear-gradient(to right,black,blue,red);
+    width: fit-content;
+    padding: 30px;
+    height: fit-content;
+    border-radius:50% ;
+    border: 3px solid azure;
+}
 .ctn6{
     width: 1520px;
     height: fit-content;
@@ -299,7 +308,7 @@ header.scroll_nav{
     justify-content: center;
     align-items: center;
     padding: 50px 0;
-    background-color: #171717;
+    background-image: linear-gradient(to right,lightblue,lightgreen,green,lightgreen ,lightblue );
     overflow: hidden;
     
 }

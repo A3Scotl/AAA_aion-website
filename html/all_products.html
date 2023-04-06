@@ -26,14 +26,14 @@
                                 <div class="products_list_ctn1_l-c1">
                                     <p class="products_list-title">EARBUDS</p>
                                     <a href="/html/product_AAATrue-pro.html" class="products_list-link">AAATrue Pro</a>
-                                    <a href="/html//html/product_AAATrue.html" class="products_list-link">AAATrue</a>
-                                    <a href="/html//html/product_AAAphone.html" class="products_list-link">AAABuds 2</a>
-                                    <a href="/html//html/product_AAALoop.html" class="products_list-link">AAALoop</a>
+                                    <a href="/html/product_AAATrue.html" class="products_list-link">AAATrue</a>
+                                    <a href="/html/product_AAAphone.html" class="products_list-link">AAABuds 2</a>
+                                    <a href="/html/product_AAALoop.html" class="products_list-link">AAALoop</a>
                                 </div>
                                 <div class="products_list_ctn1_l-c2">
                                     <div class="products_list_ctn1_l-c2-r1">
                                         <p class="products_list-title">HEADPHONES</p>
-                                        <a href="/html//html/product_AAAphone.html" class="products_list-link">AAAPhone</a>
+                                        <a href="/html/product_AAAphone.html" class="products_list-link">AAAPhone</a>
                                     </div>
                                     <div class="products_list_ctn1_l-c2-r2">
                                         <p class="products_list-title">ADD-ONS</p>
@@ -45,16 +45,16 @@
                                 <div class="products_list_ctn1_r_img">
                                     <div class="products_list_ctn1_r_img-top">
                                         <p>AAATrue Pro</p>
-                                        <img src="//img/muiTen-black.svg" alt="">
+                                        <img src="/img/muiTen-black.svg" alt="">
                                     </div>
-                                    <img src="//img/header_products-img1.jpg" alt="" class="products_list-img">
+                                    <img src="/img/header_products-img1.jpg" alt="" class="products_list-img">
                                 </div>
                                 <div class="products_list_ctn1_r_img">
                                     <div class="products_list_ctn1_r_img-top">
                                         <p>AAABluetooth®️ 5.3 Audio Transmitter</p>
-                                        <img src="//img/muiTen-black.svg" alt="">
+                                        <img src="/img/muiTen-black.svg" alt="">
                                     </div>
-                                    <img src="//img/header_products-img2.jpg" alt="" class="products_list-img">
+                                    <img src="/img/header_products-img2.jpg" alt="" class="products_list-img">
                                 </div>
                             </div>
                         </div>
@@ -62,13 +62,13 @@
                             <a href="/html/all_products.html">
                                 <button class="products_list-btn1">
                                     SHOP ALL PRODUCTS
-                                    <span><img src="//img/muiTen.svg" alt=""></span>
+                                    <span><img src="/img/muiTen.svg" alt=""></span>
                                 </button>
                             </a>
                             <a href="/html/all_products.html">
                                 <button class="products_list-btn2">
                                     SHOP ACCESSORIES
-                                    <span><img src="//img/muiTen.svg" alt=""></span>
+                                    <span><img src="/img/muiTen.svg" alt=""></span>
                                 </button>
                             </a>
                         </div>
@@ -79,8 +79,16 @@
             <div class="nav_l-link"><a href="/html/support.html" class="nav_l-link-item">Support</a></div>
         </div>
         <div class="nav_r">
-            <div class="nav_r-cart">
-                <a href="/html/cart.html">Cart</a>
+            <div class="nav_r_shopping">
+                    <div class="shopping">Card</div>
+                    <span>0</span>
+            </div>
+            <div class="nav_r_cart">
+                <p class="nav_r_cart_title">
+                    Cart List
+                </p>
+                <div class="nav_r_cart_quantity">0</div>
+                <div class="nav_r_cart_close">Close</div>
             </div>
         </div>
     </header>
@@ -238,6 +246,15 @@
                     $('header').removeClass('scroll_nav');
             });
         });
+        let openShopping = document.querySelector('.shopping');
+        let closeShopping = document.querySelector('.nav_r_cart_close');
+        let body = document.querySelector('body')
+        openShopping.addEventListener('click',()=>{
+            body.classList.add('open');
+        })
+        closeShopping.addEventListener('click',()=>{
+            body.classList.remove('open');
+         })
     </script>
 </body>
 

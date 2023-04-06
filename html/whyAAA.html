@@ -78,8 +78,16 @@
             <div class="nav_l-link"><a href="/html/support.html" class="nav_l-link-item">Support</a></div>
         </div>
         <div class="nav_r">
-            <div class="nav_r-cart">
-                <a href="/html/cart.html">Cart</a>
+            <div class="nav_r_shopping">
+                    <div class="shopping">Card</div>
+                    <span>0</span>
+            </div>
+            <div class="nav_r_cart">
+                <p class="nav_r_cart_title">
+                    Cart List
+                </p>
+                <div class="nav_r_cart_quantity">0</div>
+                <div class="nav_r_cart_close">Close</div>
             </div>
         </div>
     </header>
@@ -177,6 +185,15 @@
                 $('header').removeClass('scroll_nav');
         });
     });
+    let openShopping = document.querySelector('.shopping');
+        let closeShopping = document.querySelector('.nav_r_cart_close');
+        let body = document.querySelector('body')
+        openShopping.addEventListener('click',()=>{
+            body.classList.add('open');
+        })
+        closeShopping.addEventListener('click',()=>{
+            body.classList.remove('open');
+         })
 </script>
 
 </html>

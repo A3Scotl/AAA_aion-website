@@ -1,64 +1,71 @@
 /* footer*/
 
-
-.ft{
-    width: 1520px;
+.ft {
+    width: 100%;
     height: fit-content;
     background-color: black;
 }
-.ft_r1{
+
+.ft_r1 {
     display: flex;
     gap: 115px;
     margin-left: 50px;
 }
-.ft_r1{
 
-}
-.ft_r1_col1{
+.ft_r1 {}
+
+.ft_r1_col1 {
     width: 500px;
     color: azure;
 }
-.ft_r1_col1-logo{
+
+.ft_r1_col1-logo {
     font-size: 2rem;
     font-weight: bold;
     margin: 30px 0;
 }
-.ft_r1_col-r1{
+
+.ft_r1_col-r1 {
     color: #737373;
     font-size: 0.9rem;
 }
-.ft_r1_col1-txt{
+
+.ft_r1_col1-txt {
     font-size: 1.4rem;
 }
-.ft_r1_col{
+
+.ft_r1_col {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-
 }
-.ft_r1_col-link{
+
+.ft_r1_col-link {
     font-size: 1.3rem;
     margin: 10px 0;
     color: azure;
     text-decoration: none;
 }
 
-.ft_r1_col-link:hover{
+.ft_r1_col-link:hover {
     opacity: 0.5;
 }
-.ft_r2{
+
+.ft_r2 {
     display: flex;
     justify-content: space-between;
     padding: 30px;
     color: #737373;
     font-size: 0.8rem;
 }
-.ft_r2-c2{
+
+.ft_r2-c2 {
     display: flex;
     gap: 10px;
     align-items: center;
     cursor: pointer;
 }
-.ft_r2-c2 p:hover{
+
+.ft_r2-c2 p:hover {
     opacity: 0.8;
 }

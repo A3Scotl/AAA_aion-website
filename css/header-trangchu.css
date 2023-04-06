@@ -1,6 +1,6 @@
-
 /*header*/
-.nav{
+
+.nav {
     top: 0;
     left: 0;
     right: 0;
@@ -12,13 +12,17 @@
     justify-content: space-between;
     background-color: transparent;
     z-index: 500;
-
 }
-.nav_l{
+
+.nav_l {
     display: flex;
     gap: 15px;
 }
-.nav_l-logo a ,.nav_l-link-item,.nav_r a,.products{
+
+.nav_l-logo a,
+.nav_l-link-item,
+.nav_r a,
+.products {
     display: block;
     text-decoration: none;
     padding: 20px 20px;
@@ -26,52 +30,63 @@
     font-size: 24px;
     transition: 0.3s;
 }
-.products{
+
+.products {
     position: relative;
     cursor: pointer;
-    
 }
-.products_list{
-    width: 1520px;
+
+.products_list {
+    width: fit-content;
     height: 600px;
     position: absolute;
     background-color: #010101;
     display: none;
     top: 70px;
-    left: -270px;
+    left: -200px;
     z-index: 1;
 }
-.products:hover .products_list{
+
+.products:hover .products_list {
     display: block;
 }
-.products_list_ctn1{
+
+.products_list_ctn1 {
     margin: 40px 90px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 70px;
     border-bottom: 2px solid azure;
 }
-.products_list_ctn1_l{
+
+.products_list_ctn1_l {
     display: flex;
 }
-.products_list_ctn1_l-c1,.products_list_ctn1_l-c2{
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-}
-.products_list_ctn1_l-c2{
-    row-gap:82px;
-}
-.products_list_ctn1_l-c2-r1,.products_list_ctn1_l-c2-r2{
+
+.products_list_ctn1_l-c1,
+.products_list_ctn1_l-c2 {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
 }
-.products_list-title{
+
+.products_list_ctn1_l-c2 {
+    row-gap: 82px;
+}
+
+.products_list_ctn1_l-c2-r1,
+.products_list_ctn1_l-c2-r2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.products_list-title {
     color: #737373;
     font-size: 0.8rem;
 }
-.products_list-link{
+
+.products_list-link {
     text-decoration: none;
     color: azure;
     font-size: 48px;
@@ -80,27 +95,32 @@
     margin-left: 5px;
     transition: 0.3s;
 }
-.products_list-link:hover{
+
+.products_list-link:hover {
     opacity: 0.5;
 }
-.nav_l-link{
+
+.nav_l-link {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.products_list_ctn1_r{
+
+.products_list_ctn1_r {
     position: relative;
     display: flex;
     gap: 30px;
     opacity: 0.9;
 }
-.products_list_ctn1_r_img{
+
+.products_list_ctn1_r_img {
     width: 310px;
     height: 310px;
     overflow: hidden;
     border-radius: 20px;
 }
-.products_list_ctn1_r_img-top{
+
+.products_list_ctn1_r_img-top {
     position: absolute;
     display: flex;
     width: 290px;
@@ -109,28 +129,35 @@
     margin-left: 10px;
     margin-top: 15px;
 }
-.products_list_ctn1_r_img-top p{
+
+.products_list_ctn1_r_img-top p {
     width: 100px;
     color: #010101;
 }
-.products_list_ctn1_r_img-top img{
+
+.products_list_ctn1_r_img-top img {
     width: 20px;
     height: 20px;
 }
-.products_list-img{
+
+.products_list-img {
     width: 310px;
     height: 380px;
 }
-.products_list-img:hover{
+
+.products_list-img:hover {
     opacity: 0.8;
     transform: scale(1.3);
 }
-.products_list_ctn2{
-   padding: 10px 90px;
-   display: flex;
-   gap: 35px;
+
+.products_list_ctn2 {
+    padding: 10px 90px;
+    display: flex;
+    gap: 35px;
 }
-.products_list-btn1,.products_list-btn2{
+
+.products_list-btn1,
+.products_list-btn2 {
     width: 300px;
     height: 50px;
     border-radius: 20px;
@@ -142,48 +169,63 @@
     justify-content: center;
     gap: 10px;
     cursor: pointer;
-
 }
-.products_list-btn1:hover,.products_list-btn2:hover{
+
+.products_list-btn1:hover,
+.products_list-btn2:hover {
     opacity: 0.8;
 }
-.nav_l-link-item,.products{
+
+.nav_l-link-item,
+.products {
     position: relative;
 }
-.nav_l-logo a{
+
+.nav_l-logo a {
     margin-left: 70px;
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 4.5px;
 }
-.nav_r a{
+
+.nav_r a {
     margin-right: 70px;
     position: relative;
 }
-.nav_l-logo a:hover{
+
+.nav_l-logo a:hover {
     opacity: 0.8;
 }
-.nav_r a:hover::after,.nav_l-link-item:hover::after,.products:hover::after{
+
+.nav_r a:hover::after,
+.nav_l-link-item:hover::after,
+.products:hover::after {
     content: "";
-	display: block;
-	position: absolute;
+    display: block;
+    position: absolute;
     background-color: red;
     width: 0px;
     height: 4px;
     animation: fadeIn 400ms ease-out forwards;
     bottom: 5px;
 }
+
+
 /*hover gạch chân*/
-@keyframes fadeIn{
-    0%{
+
+@keyframes fadeIn {
+    0% {
         width: 0;
     }
-    100%{
+    100% {
         width: 70%;
     }
 }
+
+
 /*hiệu ứng khi lăn chuột xuống trên web*/
-header.scroll_nav{
+
+header.scroll_nav {
     background-color: black;
     opacity: 0.9;
 }

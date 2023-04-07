@@ -21,7 +21,7 @@
 
 .nav_l-logo a,
 .nav_l-link-item,
-.nav_r a,
+
 .products {
     display: block;
     text-decoration: none;
@@ -43,7 +43,7 @@
     background-color: #010101;
     display: none;
     top: 70px;
-    left: -200px;
+    left: -240px;
     z-index: 1;
 }
 
@@ -185,32 +185,194 @@
     margin-left: 70px;
     font-weight: bold;
     font-size: 2rem;
-    margin-bottom: 4.5px;
+    margin-bottom: 8px;
 }
 
-.nav_r a {
-    margin-right: 70px;
-    position: relative;
-}
+
 
 .nav_l-logo a:hover {
     opacity: 0.8;
 }
-
-.nav_r a:hover::after,
 .nav_l-link-item:hover::after,
 .products:hover::after {
     content: "";
     display: block;
     position: absolute;
-    background-color: red;
+    background-color: #3333f5;
     width: 0px;
     height: 4px;
     animation: fadeIn 400ms ease-out forwards;
     bottom: 5px;
 }
+.nav_r{
 
+}
+.nav_r_shopping{
+    font-size: 24px;
+    padding: 20px;
+    color: azure;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.nav_r_shopping:active{
+    opacity: 0.8;
 
+}
+.nav_r_shopping span{
+    width: 10px;
+    height: 10px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    right: 55px;
+}
+.nav_r_cart{
+    width: 50%;
+    height: 740px;
+    background-color: #010101;
+    position: fixed;
+    top:0 ;
+    right: -60%;
+    transition: 0.5s;
+    box-shadow: 5px 10px 8px 10px black;
+}
+
+.open .nav_r_cart{
+    right: 0;
+    background-color:rgba(0,0,0,0.75);
+}
+.nav_r_cart .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: azure;
+    font-size: 24px;
+    padding: 22px 60px;
+    border-bottom: 1px solid azure;
+    font-weight: bold;
+}
+.nav_r_cart .header .title .title_quantity{
+   width: 10px;
+   height: 10px;
+   font-size: 13px;
+   position: absolute;
+   top: 15px;
+   left: 140px;
+    
+}
+.nav_r_cart .header .close{
+    cursor: pointer;
+}
+/*list item cart*/
+.nav_r_cart .list{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 310px;
+    border-bottom: 1px solid azure;
+    display: grid;
+    grid-template-rows: 180px;
+}
+.product{
+    display: flex;
+}
+.cart_item{
+    display: flex;
+    justify-content: space-between;
+    color: azure;
+    font-size: 20px;
+    padding: 20px 50px;
+}
+.product_img img{
+    height: 136px;
+    width: 136px;
+    padding: 0 20px;
+}
+.product_name{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+}
+.product_quantity{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.product_quantity div{
+    width: 25px;
+    height: 25px;
+    border: 1px solid azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.remove,.price{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.remove{
+    width: 30px;
+    height: 30px;
+    border: 3px solid azure;
+    cursor: pointer;
+}
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 120px;
+}
+/**/
+.nav_r_cart .checkout{
+    height: 230px;
+    border-bottom: 1px solid azure;
+    padding-bottom: 20px;
+}
+.nav_r_cart .checkout .r1{
+    display: flex;
+    justify-content: space-between;
+    gap: 300px;
+    padding: 20px 60px;
+    color: rgb(82 138 39);
+    font-weight: bold;
+    font-size: 24px;
+}
+.nav_r_cart .checkout .r2{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    color: azure;
+    font-weight: bold;
+    font-size: 24px;
+    height: 40px;
+}
+.nav_r_cart .checkout .r3{
+    padding: 20px 50px;
+}
+.nav_r_cart .checkout .r3 .btn_checkout{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: azure;
+    font-size: 24px;
+    padding: 10px 10px;
+    background-color: #3333f5;
+    border-radius: 30px;
+}
+.remove:hover,.btn_checkout:hover{
+    opacity: 0.8;
+}
 /*hover gạch chân*/
 
 @keyframes fadeIn {
@@ -227,5 +389,5 @@
 
 header.scroll_nav {
     background-color: black;
-    opacity: 0.9;
+  
 }

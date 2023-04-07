@@ -81,15 +81,101 @@
         <div class="nav_r">
             <div class="nav_r_shopping">
                     <div class="shopping">Card</div>
-                    <span>0</span>
+                    <span>[3]</span>
             </div>
             <div class="nav_r_cart">
-                <p class="nav_r_cart_title">
-                    Cart List
-                </p>
-                <div class="nav_r_cart_quantity">0</div>
-                <div class="nav_r_cart_close">Close</div>
-            </div>
+                <div class="header">
+                    <div class="title">
+                        <div>Card</div>
+                        <div class="title_quantity">
+                          <p>[3]</p>
+                        </div>
+                    </div>
+                    <div class="close">
+                        Close
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="cart_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="/img/aaaphone.jpg" alt="">
+                            </div>
+                            <div class="product_name">
+                                AAAphone
+                                <div class="product_quantity">
+                                    <div>-</div>
+                                    <div>1</div>
+                                    <div>+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            $399
+                        </div>
+                        <div class="remove">X</div>
+                    </div>
+                    <div class="cart_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="/img/aaaLoop.jpg" alt="">
+                            </div>
+                            <div class="product_name">
+                                AAALoop
+                                <div class="product_quantity">
+                                    <div>-</div>
+                                    <div>1</div>
+                                    <div>+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            $179
+                        </div>
+                        <div class="remove">X</div>
+                    </div>
+                    <div class="cart_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="/img/aaaTrue.jpg" alt="">
+                            </div>
+                            <div class="product_name">
+                                AAATrue
+                                <div class="product_quantity">
+                                    <div>-</div>
+                                    <div>1</div>
+                                    <div>+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            $199.99
+                        </div>
+                        <div class="remove">X</div>
+                    </div>
+                </div>
+                <div class="checkout">
+                    <div class="r1">
+                        <div class="lefl">Discount</div>
+                        <div class="right">$700.60</div>
+                    </div>
+                    <div class="r2">
+                        <div class="lefl">Subtotal</div>
+                        <div class="right"> $779.99</div>
+                    </div>
+                    <div class="r3">
+                        <a href="" class="btn_checkout">
+                            <span>CHECKOUT</span>
+                            <img src="/img/muiTen.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="link">
+                    <img src="/img/cdn_gobal.svg" alt="">
+                    <img src="/img/paypal.svg" alt="">
+                    <img src="/img/visa.svg" alt="">
+                </div>
+               </div>
         </div>
     </header>
     <div class="ctn">
@@ -247,13 +333,19 @@
             });
         });
         let openShopping = document.querySelector('.shopping');
-        let closeShopping = document.querySelector('.nav_r_cart_close');
+        let closeShopping = document.querySelector('.close');
         let body = document.querySelector('body')
         openShopping.addEventListener('click',()=>{
             body.classList.add('open');
         })
         closeShopping.addEventListener('click',()=>{
             body.classList.remove('open');
+         })
+         ///
+         var $removeItem = $('.remove');
+         $removeItem.on('click',function(){
+            var $item = $(this).parents('.cart_item');
+            $item.remove();
          })
     </script>
 </body>

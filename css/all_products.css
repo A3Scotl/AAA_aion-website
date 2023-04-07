@@ -1,5 +1,7 @@
 /* container */
-
+body{
+    scroll-behavior: smooth;
+}
 .ctn {
     background-color: #171717;
     width: 100%;

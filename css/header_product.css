@@ -6,12 +6,13 @@
     right: 0;
     width: 100%;
     height: 80px;
-    position: fixed;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: #010101;
     z-index: 500;
+    transition: 0.5s;
 }
 
 .nav_l {
@@ -240,6 +241,7 @@
     right: -60%;
     transition: 0.5s;
     box-shadow: 5px 10px 8px 10px black;
+    z-index: 100;
 }
 
 .open .nav_r_cart{
@@ -381,12 +383,4 @@
     100% {
         width: 70%;
     }
-}
-
-
-/*hiệu ứng khi lăn chuột xuống trên web*/
-
-header.scroll_nav {
-    background-color: black;
-  
 }

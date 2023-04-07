@@ -24,8 +24,7 @@ header.scroll_nav {
 /* container*/
 
 .ctn {
-    width: 100%;
-    position: relative;
+    width: 200vh;
 }
 
 .ctn1 {

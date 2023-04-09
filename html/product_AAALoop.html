@@ -351,30 +351,6 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script>
-         $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(this).scrollTop()) {
-                    $('header').addClass('scroll_nav');
-                } else
-                    $('header').removeClass('scroll_nav');
-            });
-        });
-        let Shopping = document.querySelector('.shopping');
-        let closeShopping = document.querySelector('.close');
-        let body = document.querySelector('body')
-        Shopping.addEventListener('click',()=>{
-            body.classList.add('open');
-        })
-        closeShopping.addEventListener('click',()=>{
-            body.classList.remove('open');
-         })
-         ///
-         var $removeItem = $('.remove');
-         $removeItem.on('click',function(){
-            var $item = $(this).parents('.cart_item');
-            $item.remove();
-         })
-    </script>
+    <script src="/js/event.js"></script>
 </body>
 </html>

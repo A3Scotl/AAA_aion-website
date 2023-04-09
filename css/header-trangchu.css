@@ -234,26 +234,27 @@
 .nav_r_cart{
     width: 50%;
     height: 740px;
-    background-color: #010101;
+    background-color: transparent;
     position: fixed;
     top:0 ;
-    right: -60%;
+    right: -200%;
     transition: 0.5s;
-    box-shadow: 5px 10px 8px 10px black;
+    box-shadow: 5px 100px 1000px 900px rgba(0,0,0,0.75);
+    z-index: 100;
 }
 
 .open .nav_r_cart{
     right: 0;
-    background-color:rgba(0,0,0,0.75);
+    background-color:white;
 }
 .nav_r_cart .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: azure;
+    color: #000;
     font-size: 24px;
     padding: 22px 60px;
-    border-bottom: 1px solid azure;
+    border-bottom: 1px solid gray;
     font-weight: bold;
 }
 .nav_r_cart .header .title .title_quantity{
@@ -274,7 +275,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     height: 310px;
-    border-bottom: 1px solid azure;
+    border-bottom: 1px solid gray;
     display: grid;
     grid-template-rows: 180px;
 }
@@ -284,9 +285,10 @@
 .cart_item{
     display: flex;
     justify-content: space-between;
-    color: azure;
+    color: #000;
     font-size: 20px;
     padding: 20px 50px;
+
 }
 .product_img img{
     height: 136px;
@@ -298,16 +300,19 @@
     flex-direction: column;
     row-gap: 30px;
     justify-content: center;
+    color: black;
+    
 }
 .product_quantity{
     display: flex;
     justify-content: space-evenly;
-    
+    gap: 5px;
+    color: #000;
 }
 .product_quantity div{
     width: 25px;
     height: 25px;
-    border: 1px solid azure;
+    border: 1px solid gray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -317,11 +322,12 @@
     display: flex;
     align-self: center;
     justify-content: center;
+    color: #000;
 }
 .remove{
     width: 30px;
     height: 30px;
-    border: 3px solid azure;
+    border: 3px solid #000;
     cursor: pointer;
 }
 .link{
@@ -334,7 +340,7 @@
 /**/
 .nav_r_cart .checkout{
     height: 230px;
-    border-bottom: 1px solid azure;
+    border-bottom: 1px solid gray;
     padding-bottom: 20px;
 }
 .nav_r_cart .checkout .r1{
@@ -349,7 +355,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 60px;
-    color: azure;
+    color: #000;
     font-weight: bold;
     font-size: 24px;
     height: 40px;

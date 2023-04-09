@@ -55,7 +55,6 @@
 /*scroll acholink*/
 header.scroll_nav {
     top:-1px;
-  
 }
 /*----------------*/
 .ctn_product{
@@ -72,7 +71,7 @@ header.scroll_nav {
     grid-template-rows: repeat(2,475px);
     gap: 10px;
     row-gap: 10px;
-   margin-left: 90px;
+    margin-left: 90px;
     position: relative;
 }
 .ctn_product_img img{
@@ -85,7 +84,7 @@ header.scroll_nav {
     transform: scale(0.9);
 }
 .ctn_product_detail{
-   margin-left: 200px;
+   margin-left: 150px;
    
 }
 .ctn_product_detail_name{

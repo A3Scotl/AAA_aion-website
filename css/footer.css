@@ -1,9 +1,9 @@
 /* footer*/
 
 .ft {
-    width: 200vh;
+    width: 100%;
     height: fit-content;
-    background-color: black;
+    background-color: transparent;
 }
 
 .ft_r1 {

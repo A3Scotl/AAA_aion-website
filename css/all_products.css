@@ -16,15 +16,16 @@ body{
 
 .ctn_r1 {
     padding-top: 180px;
-    margin-left: 90px;
     font-size: 4rem;
+    width: fit-content;
+    margin-left: 90px;
 }
 
 .ctn_r2,
 .ctn_r3 {
     margin-left: 90px;
     display: grid;
-    width: 1355px;
+    width: fit-content;
     grid-template-columns: repeat(5, 255px);
     gap: 20px;
 }
@@ -80,7 +81,9 @@ body{
     color: azure;
     cursor: pointer;
 }
-
+.product_card-btn:hover{
+    opacity: 0.8;
+}
 .product_card-btn button {
     width: 100%;
     height: 100%;

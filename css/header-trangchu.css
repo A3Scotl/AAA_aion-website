@@ -1,5 +1,13 @@
 /*header*/
-
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: black;
+    margin-top: 80px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #010101;
+    border-radius: 30px;
+}
 .nav {
     top: 0;
     left: 0;
@@ -231,6 +239,7 @@
     top: 20px;
     right: 55px;
 }
+
 .nav_r_cart{
     width: 50%;
     height: 740px;
@@ -272,8 +281,7 @@
 /*list item cart*/
 .nav_r_cart .list{
     position: relative;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: scroll;
     height: 310px;
     border-bottom: 1px solid gray;
     display: grid;

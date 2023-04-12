@@ -14,7 +14,6 @@ body{
    align-items: center;
    width: 400px;
    height: fit-content; 
-   padding-bottom: 30px;
    margin-top: 100px;
    background-color: white;
    border-radius: 5px;
@@ -48,7 +47,7 @@ input{
     
 }
 a{  
-    width: 100%;
+    width: fit-content;
     color: blue;
     text-align: right;
     font-size: 20px;
@@ -68,4 +67,24 @@ button{
 }
 button:hover{
    opacity: 0.6;
+}
+.back 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: red;
+    margin-top: 20px;
+    background-image: linear-gradient(to right,pink,blue);
+    padding: 5px 0;
+}
+.back a{
+    font-size: 14px;
+    color: azure;
+    width: fit-content;
+    text-decoration: none;
+}
+.back a:hover{
+    opacity: 0.8;
 }

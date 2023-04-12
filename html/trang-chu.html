@@ -256,12 +256,35 @@
                 <p class="ctn3_txt3">
                     Use the Nura app to create a hearing profile, configure touch buttons, adjust immersion mode and more.
                 </p>
-                <a href="/html/login.html">
-                    <button class="ctn3_txt-btn">
-                        LOG IN NOW 
-                        <img src="/img/muiTen.svg" alt="">
-                    </button>
-                </a>
+            
+                <button class="btn_login" id="login">
+                    LOG IN NOW 
+                    <img src="/img/muiTen.svg" alt="">
+                </button>
+                <div class="login">
+                    <div class="wrapper">
+                        <div class="wrapper_header">
+                            LOG IN
+                        </div>
+                        <div class="close_login" id="close_login">
+                            X
+                        </div>
+                        <form onsubmit="login()">
+                            <div class="input_field">
+                                <input type="text" id="username" placeholder="User Name">
+                            </div>
+                            <div class="input_field">
+                                <input type="text" id="email" placeholder="Email">
+                            </div>
+                            <div class="input_field">
+                                <input type="password" id="password" placeholder="Password">
+                            </div>
+                            <a href="signup.html">Sign up</a>
+                            <button id="btn-LogIn">Log In</button>
+                        </form>
+                    </div>
+                </div>
+          
             </div>
         </div>
         <div class="ctn4">
@@ -343,8 +366,10 @@
             </div>
         </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script src="/js/event.js"></script>
+    <script src="/js/user.js"></script>
 </body>
 
 </html>

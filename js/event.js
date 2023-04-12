@@ -7,7 +7,7 @@ $(document).ready(function() {
            $('header').removeClass('scroll_nav');
    });
 });
-/*mở shoping cart*/
+/*mở modal*/
 let Shopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.close');
 let body = document.querySelector('body')
@@ -16,6 +16,15 @@ Shopping.addEventListener('click',()=>{
 })
 closeShopping.addEventListener('click',()=>{
    body.classList.remove('open');
+})
+
+const login = document.getElementById('login')
+const closelogin = document.getElementById('close_login')
+login.addEventListener('click',()=>{
+   body.classList.add('open_login');
+})
+closelogin.addEventListener('click',()=>{
+   body.classList.remove('open_login');
 })
 /*xóa item trong shopping cart*/
 var $removeItem = $('.remove');
@@ -27,4 +36,5 @@ $removeItem.on('click',function(){
 let add_to_cart = document.querySelector('.add-to-cart');
 add_to_cart.addEventListener('click',()=>{
    alert("Thêm sản phẩm thành công!!");
-})
+}) 
+

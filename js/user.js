@@ -14,7 +14,7 @@ function signup(e) {
         alert("Vui lòng nhập đầy đủ thông tin!!!");
     else {
         alert("Đăng kí thành công!!");
-        window.location.href = "login.html";
+        window.location.href = "trang-chu.html";
     }
 }
 

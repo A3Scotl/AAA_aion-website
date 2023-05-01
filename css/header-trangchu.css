@@ -1,12 +1,12 @@
 /*header*/
 ::-webkit-scrollbar{
-    width: 10px;
-    background-color: black;
+    width: 5px;
+    background-color: #010101;
     margin-top: 80px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: #010101;
-    border-radius: 30px;
+    border-radius:4px;
 }
 .nav {
     top: 0;
@@ -29,7 +29,6 @@
 
 .nav_l-logo a,
 .nav_l-link-item,
-
 .products {
     display: block;
     text-decoration: none;
@@ -75,6 +74,7 @@
 .products_list_ctn1_l-c2 {
     display: flex;
     flex-direction: column;
+    text-align: left;
     row-gap: 15px;
 }
 
@@ -102,6 +102,7 @@
     width: 310px;
     margin-left: 5px;
     transition: 0.3s;
+    text-align: left;
 }
 
 .products_list-link:hover {
@@ -281,11 +282,11 @@
 /*list item cart*/
 .nav_r_cart .list{
     position: relative;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 310px;
     border-bottom: 1px solid gray;
     display: grid;
-    grid-template-rows: 180px;
+  
 }
 .product{
     display: flex;
@@ -311,50 +312,53 @@
     color: black;
     
 }
-.product_quantity{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 5px;
-    color: #000;
+.list tr{
+    display:grid;
+    grid-template-columns: 250px repeat(3,150px);
+    color: #010101;
+    row-gap: 10px ;
+    margin: 20px;
 }
-.product_quantity div{
-    width: 25px;
-    height: 25px;
-    border: 1px solid gray;
+.list tr div{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
 }
-.remove,.price{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    color: #000;
+.list tr img{
+    width: 70%;
 }
-.remove{
+.list tr button{
     width: 30px;
     height: 30px;
-    border: 3px solid #000;
+    color: black;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid #010101;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.list tr button:active{
+    background-color: #010101;
+    color: aliceblue;
 }
 .link{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 120px;
+    height: 100px;
 }
 /**/
 .nav_r_cart .checkout{
-    height: 230px;
+    height: 200px;
     border-bottom: 1px solid gray;
     padding-bottom: 20px;
 }
 .nav_r_cart .checkout .r1{
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
+    padding: 10px 60px;
     color: rgb(82 138 39);
     font-weight: bold;
     font-size: 24px;

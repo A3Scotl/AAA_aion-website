@@ -426,7 +426,7 @@ header.scroll_nav {
     opacity: 0.8;
 }
 /*//////////////////////////////////////////////////////////////*/
-.login
+.form-login
 {
     background-color: rgb(0,0, 0, 0.75);
     height: calc(100vh);
@@ -437,7 +437,7 @@ header.scroll_nav {
     left: 0;
     transition: all 0.5s ease-in-out;
 }
-.open_login .login{
+.open_form-login .form-login{
     bottom: 0;
 }
 .wrapper{
@@ -494,12 +494,13 @@ button{
     height: 50px;
     background-color: blue;
     border-radius: 5px;
-    color: azure;
     cursor: pointer;
-    font-size: 15px;
     outline: none;
     border: none;
     transition: all 0.3s;
+}
+button{
+    color: azure;
 }
 button:hover{
    opacity: 0.6;

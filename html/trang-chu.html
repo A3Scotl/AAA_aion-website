@@ -77,101 +77,8 @@
             <div class="nav_l-link"><a href="/html/whyAAA.html" class="nav_l-link-item">Why AAA?</a></div>
             <div class="nav_l-link"><a href="/html/support.html" class="nav_l-link-item">Support</a></div>
         </div>
-        <div class="nav_r">
-            <div class="nav_r_shopping">
-                    <div class="shopping">Card</div>
-                    <span id="soLuong">0</span>
-            </div>
-            <div class="nav_r_cart">
-                <div class="header">
-                    <div class="title">
-                        <div>Card</div>
-                    </div>
-                    <div class="close">
-                        Close
-                    </div>
-                </div>
-                <div class="list">
-                    <div class="cart_item">
-                        <div class="product">
-                            <div class="product_img">
-                                <img src="/img/aaaphone.jpg" alt="">
-                            </div>
-                            <div class="product_name">
-                                AAAphone
-                                <div class="product_quantity">
-                                    <div>-</div>
-                                    <div>1</div>
-                                    <div>+</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="price">
-                            $399
-                        </div>
-                        <div class="remove">X</div>
-                    </div>
-                    <div class="cart_item">
-                        <div class="product">
-                            <div class="product_img">
-                                <img src="/img/aaaLoop.jpg" alt="">
-                            </div>
-                            <div class="product_name">
-                                AAALoop
-                                <div class="product_quantity">
-                                    <div>-</div>
-                                    <div>1</div>
-                                    <div>+</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="price">
-                            $179
-                        </div>
-                        <div class="remove">X</div>
-                    </div>
-                    <div class="cart_item">
-                        <div class="product">
-                            <div class="product_img">
-                                <img src="/img/aaaTrue.jpg" alt="">
-                            </div>
-                            <div class="product_name">
-                                AAATrue
-                                <div class="product_quantity">
-                                    <div>-</div>
-                                    <div>1</div>
-                                    <div>+</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="price">
-                            $199.99
-                        </div>
-                        <div class="remove">X</div>
-                    </div>
-                </div>
-                <div class="checkout">
-                    <div class="r1">
-                        <div class="lefl">Discount</div>
-                        <div class="right">$700.60</div>
-                    </div>
-                    <div class="r2">
-                        <div class="lefl">Subtotal</div>
-                        <div class="right"> $779.99</div>
-                    </div>
-                    <div class="r3">
-                        <a href="checkout.html" class="btn_checkout">
-                            <span>CHECKOUT</span>
-                            <img src="/img/muiTen.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="link">
-                    <img src="/img/cdn_gobal.svg" alt="">
-                    <img src="/img/paypal.svg" alt="">
-                    <img src="/img/visa.svg" alt="">
-                </div>
-               </div>
+        <div class="user">
+            <img src="/img/person.svg" alt="" style="background-color: azure; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; ">
         </div>
     </header>
     <div class="ctn">
@@ -198,15 +105,15 @@
             </div>
             <div class="ctn3_txt">
                 <p class="ctn3_txt1">Play from any device.</p>
-                <p class="ctn3_txt2">
-                    Your hearing profile is <span>stored on the earbuds</span>, and is applied to whatever you listen to, <span>on any device</span>.
+                <p class="ctn3_txt2"><span><i>AAATrue Pro</i></span>
+                    your hearing profile is <span>stored on the earbuds</span>, and is applied to whatever you listen to, <span>on any device</span>.
                 </p>
                 <p class="ctn3_txt3">
                     Use the Nura app to create a hearing profile, configure touch buttons, adjust immersion mode and more.
                 </p>
             
-                <button class="btn_login" id="login">
-                    LOG IN NOW 
+                <button class="btn_login" id="learnmore">
+                    LEARN MORE 
                     <img src="/img/muiTen.svg" alt="">
                 </button>
                 <div class="form-login">
@@ -317,11 +224,15 @@
     
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script src="/js/scroll.js"></script>
-    <script src="/js/openShoppingcart.js"></script>
-    <script src="/js/removeProduct.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/openLogIn.js"></script>
     <script src="/js/dataProducts.js"></script>
+    <script>
+        let learnMore = document.querySelector('#learnmore')
+        learnMore.addEventListener('click',()=>{
+            window.location.href ='/html/product_AAATrue-pro.html'
+        })
+    </script>
    
 </body>
 

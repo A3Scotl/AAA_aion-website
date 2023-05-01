@@ -15,15 +15,19 @@
         <form onsubmit="signup()">
             <div class="input_field">
                 <input type="text" id="username" placeholder="User Name">
+                <span id="errUser">*</span>
             </div>
             <div class="input_field">
                 <input type="text" id="email" placeholder="Email">
+                <span id="errEmail">*</span>
             </div>
             <div class="input_field">
                 <input type="password" id="password" placeholder="Password">
+                <span id="errPas">*</span>
             </div>
             <div class="input_field">
-                <input type="password" id="password" placeholder="Confirm Password">
+                <input type="password" id="cfpassword" placeholder="Confirm Password">
+                <span id="errCf">*</span>
             </div>
             <button id="btn-SignUp">Sign Up</button>
         </form>

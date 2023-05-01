@@ -8,9 +8,6 @@ function login(e) {
     var rexname  = '/^[a-zA-Z0-9]{6,32}+$/';
     if (username == "" || email == "" || password == "")
         alert("Vui lòng nhập đầy đủ thông tin!!!");
-    else if(!(rexname.test(username))){
-        alert("Tài khoản không đúng định dạng!");s
-    }
     else if (user == null)
         alert("Tài khoản này hiện chưa được đăng kí hãy đăng kí tài khoản!!");
     else if (username == data.username && email == data.email && password == data.password) {

@@ -40,7 +40,7 @@
     bottom: 5px;
 }
 .ctn_header_buynow{
-    background-color: #3333f5;
+
     width: 150px;
     height: 60px;
     margin-right: 70px;
@@ -48,9 +48,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    cursor: pointer;
-}.ctn_header_buynow:hover{
-    opacity: 0.8;
 }
 /*scroll acholink*/
 header.scroll_nav {

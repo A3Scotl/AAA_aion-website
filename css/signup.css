@@ -28,7 +28,7 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 40px;
     align-items: center;
 }
 .input_field{
@@ -87,4 +87,13 @@ button:hover{
 }
 .back a:hover{
     opacity: 0.8;
+}
+.err-text{
+    font-size: 12px ;
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+.err-input{
+    border: 1px solid red;
 }

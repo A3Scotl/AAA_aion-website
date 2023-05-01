@@ -1,27 +1,83 @@
 function signup(e) {
     event.preventDefault();
     var username = document.getElementById("username").value;
+    var erUser = document.getElementById("errUser");
     var rgexUsername = /^[a-zA-Z0-9]{6,}$/;
     var email = document.getElementById("email").value;
+    var rgexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    //example@email.com/
+    var erEmail = document.getElementById("errEmail");
     var password = document.getElementById("password").value;
+    var rgexPass = /^[a-zA-Z0-9]{8,}$/;
+    // 123456/;
+    var erPass = document.getElementById("errPas");
+    var cfpass = document.getElementById("cfpassword").value;
+    var erCf = document.getElementById("errCf");
     var user = {
         username: username,
         email: email,
         password: password,
+        cfpass : cfpass
     }
     var json = JSON.stringify(user);
-    localStorage.setItem(username, json)
-    if (username == "" || email == "" || password == "")
+    
+    if (username == "" || email == "" || password == "" || cfpass =="")
         alert("Vui lòng nhập đầy đủ thông tin!!!");
-    else if(!rgexUsername.test(username)){
-        alert("k hop le");
-    }
-    else if(){
+    if(username!=""){
+        if(!rgexUsername.test(username)){
+            document.querySelector("#username").classList.add("err-input");
+            erUser.classList.add("err-text");
+            erUser.innerHTML = "Tên tài khoản không hợp lệ!!!";
+        }
+        else
+        {
+            document.querySelector("#username").classList.remove("err-input")
+            erUser.innerHTML = "";
+        }
         
     }
-    else {
+    if(email!=""){
+        if(!rgexEmail.test(email)){
+            document.querySelector("#email").classList.add("err-input")
+            erEmail.classList.add("err-text")
+            erEmail.innerHTML = "Gmail không hợp lệ!!!";
+        }
+        else
+        {document.querySelector("#email").classList.remove("err-input")
+            erEmail.innerHTML="";
+        }
+    }
+   
+    if(password != ""){
+        if(!rgexPass.test(password)){
+            document.querySelector("#password").classList.add("err-input")
+            erPass.classList.add("err-text")
+            erPass.innerHTML = "Mật khẩu không hợp lệ!!!";
+        }
+        else
+       {
+        document.querySelector("#password").classList.remove("err-input")
+        erPass.innerHTML="";
+       }
+    }
+    
+    if(cfpass!=""){
+        if(cfpass!=password){
+            document.querySelector("#cfpassword").classList.add("err-input")
+            erCf.classList.add("err-text")
+            erCf.innerHTML = "Mật khẩu không trùng khớp!!!";
+        }
+        else
+      {
+        document.querySelector("#cfpassword").classList.add("err-input")
+        erCf.innerHTML = "";
+      }
+    }
+   
+    if(rgexUsername.test(username)&&rgexPass.test(password)&&cfpass==password&&rgexEmail.test(email)){
         alert("Đăng kí thành công!!");
         window.location.href = "trang-chu.html";
+        localStorage.setItem(username, json)
     }
 }
 

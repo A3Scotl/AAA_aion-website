@@ -21,6 +21,9 @@
 .ctn_header_name{
     margin-left: 95px;
     padding: 20px 0;
+    
+
+    font-style: italic;
 }
 .ctn_header_slide a{
     display: inline-block;
@@ -149,6 +152,7 @@ header.scroll_nav {
     padding-bottom: 40px;
     display: flex;
     align-items: center;
+    height: 100vh;
 }
 .ctn_tech-specs_title{
     font-size: 3rem;
@@ -210,4 +214,29 @@ header.scroll_nav {
 }
 .ctn_in-the-box img{
     width: 100%;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.item{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.img_item{
+    width: 25%;
+}
+.img_item img{
+    width: 100%;
+}
+.name_item,.price_item{
+    color:  azure;
+}
+.qty_item{
+        width: 30px;
+        height: 30px;
 }

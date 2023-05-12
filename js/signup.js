@@ -8,7 +8,7 @@ function signup(e) {
     //example@email.com/
     var erEmail = document.getElementById("errEmail");
     var password = document.getElementById("password").value;
-    var rgexPass = /^[a-zA-Z0-9]{8,}$/;
+    var rgexPass = /^.{8,}$/;
     // 123456/;
     var erPass = document.getElementById("errPas");
     var cfpass = document.getElementById("cfpassword").value;
@@ -24,10 +24,11 @@ function signup(e) {
     if (username == "" || email == "" || password == "" || cfpass =="")
         alert("Vui lòng nhập đầy đủ thông tin!!!");
     if(username!=""){
-        if(!rgexUsername.test(username)){
+        if(!isNaN(username)){
             document.querySelector("#username").classList.add("err-input");
             erUser.classList.add("err-text");
             erUser.innerHTML = "Tên tài khoản không hợp lệ!!!";
+            return username
         }
         else
         {
@@ -36,6 +37,7 @@ function signup(e) {
         }
         
     }
+    console.log(username)
     if(email!=""){
         if(!rgexEmail.test(email)){
             document.querySelector("#email").classList.add("err-input")
@@ -77,7 +79,7 @@ function signup(e) {
     if(rgexUsername.test(username)&&rgexPass.test(password)&&cfpass==password&&rgexEmail.test(email)){
         alert("Đăng kí thành công!!");
         window.location.href = "trang-chu.html";
-        localStorage.setItem(username, json)
+        localStorage.setItem("user", json)
     }
 }
 

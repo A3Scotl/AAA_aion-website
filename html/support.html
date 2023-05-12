@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/allHtml.css">
     <link rel="stylesheet" href="/css/support.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>AAA - Support</title>
@@ -16,9 +17,9 @@
             <div>AAA</div>
             <span>SUPPORT</span>
         </div>
-        <div class="header_back">
+        <div class="header_back" style="cursor: pointer;">
             <div>Back to</div>
-            <span>aaa.co</span>
+            <span  >aaa.co</span>
         </div>
     </div>
     <div class="search">
@@ -32,7 +33,63 @@
           </div>
         </div>
     </div>
+    <div class="ctn">
+        <div class="ctn_r1">All products</div>
+        <div class="ctn_r2_allProducts">
+        </div>
+    </div>
+    <div class="ft" style="background-color: black;">
+        <div class="ft_r1">
+            <div class="ft_r1_col1">
+                <p class="ft_r1_col1-logo">AAA.aion</p>
+                <p class="ft_r1_col1-txt">AAA designs headphones tuned to you. Bringing you closer to music with personalised sound.</p>
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">SHOP</p>
+                <a href="product_AAATrue-pro.html" class="ft_r1_col-link">AAATrue Pro</a>
+                <a href="product_AAATrue.html" class="ft_r1_col-link">AAATrue</a>
+                <a href="product_AAAphone.html" class="ft_r1_col-link">AAABuds 2</a>
+                <a href="product_AAAphone.html" class="ft_r1_col-link">AAAphone</a>
+                <a href="product_AAALoop.html" class="ft_r1_col-link">AAALoop</a>
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">INFO</p>
+                <a href="whyAAA.html" class="ft_r1_col-link">Why AAA?</a>
+                <a href="#" class="ft_r1_col-link">Shipping</a>
+                <a href="#" class="ft_r1_col-link">Returns</a>
+                <a href="#" class="ft_r1_col-link">Warranty</a>
+                <a href="#" class="ft_r1_col-link">Patents</a>
+
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">SUPPORT</p>
+                <a href="#" class="ft_r1_col-link">Hels Centre</a>
+                <a href="#" class="ft_r1_col-link">Contact Us</a>
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">SOCIALS</p>
+                <a href="https://www.instagram.com/" class="ft_r1_col-link">Instagram</a>
+                <a href="https://www.facebook.com/" class="ft_r1_col-link">Facebook</a>
+                <a href="https://www.youtube.com/" class="ft_r1_col-link">Youtube</a>
+                <a href="https://www.tidal.com/" class="ft_r1_col-link">Tidal</a>
+            </div>
+        </div>
+        <div class="ft_r2">
+            <p class="ft_r2-c1">Copyright © 2022 Nura Operations Pty Ltd. All rights reserved.</p>
+            <div class="ft_r2-c2">
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>Legal</p>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="/js/event.js"></script>
+    <script>
+        let backHome = document.querySelector(".header_back")
+        backHome.addEventListener('click',()=>{
+            window.location.href = "/html/trang-chu.html"
+        })
+    </script>
+
 </body>
 </html>

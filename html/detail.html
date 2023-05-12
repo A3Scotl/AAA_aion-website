@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/allHtml.css">
     <link rel="stylesheet" href="/css/header_product.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/product_AAA.css">
+    <link rel="stylesheet" href="/css/details.css">
     <title>Product-AAALoop</title>
 </head>
 <body>
@@ -148,7 +148,7 @@
                 <div class="ctn_product_detail_description">
                 </div>
                 <div class="ctn_product_detail_btn">
-                    <p id="add-to-cart">Add to cart</p>
+                    <p id="add-to-cart" onclick="addToCard()">Add to cart</p>
                     <img src="/img/muiTen.svg" alt="">
                 </div>
                 <div class="ctn_product_detail_key-features">
@@ -283,8 +283,16 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script src="/js/scroll.js"></script>
     <script>
+        let Shopping = document.querySelector('.shopping');
+        let closeShopping = document.querySelector('.close');
+        let body = document.querySelector('body')
+        Shopping.addEventListener('click',()=>{
+           body.classList.add('open');
+        })
+        closeShopping.addEventListener('click',()=>{
+           body.classList.remove('open');
+        })
         var sp = JSON.parse(localStorage.getItem("sanpham"))
-        console.log(sp);
         document.querySelector("title").innerHTML = `${sp.name}`;
         document.querySelector(".ctn_header_name").innerHTML = `${sp.name}`;
         document.querySelector(".ctn_product_detail_name").innerHTML = `${sp.name}`;
@@ -307,6 +315,39 @@
         document.querySelector(".ctn_features_img_c2_r1").innerHTML = strImgBig3; 
         var strImgBig4 = `<img src="/img/${sp.bigImg[3]}" alt="">`;
         document.querySelector(".ctn_features_img_c2_r2").innerHTML = strImgBig4; 
+        var listCards = []
+        listCards = JSON.parse(localStorage.getItem("myCart"))
+        console.log(listCards)
+        var dataSP =""
+       
+        localStorage.setItem("myCart",JSON.stringify(listCards))
+       
+ 
+        function addToCard(){
+            let count = 0;
+            let totalPrice = 0;
+            let newDiv = "";
+            newDiv += 
+            ` <div class="item">
+               <div class="img_item">
+                 <img src="/img/${sp.img[0]}"/>
+                 </div>
+            <div class="name_item">${sp.name}</div>
+            <div class="price_item">${sp.price.toLocaleString()}</div>
+         <div>
+           <input type="number" min="0" class="qty_item" value="1">
+        </div></div>`
+        
+        ;
+        document.querySelector(".list").innerHTML =newDiv
+        var price = document.querySelector(".price_item").value;
+        var qty = document.querySelector(".qty_item").value;
+        var Subtotal  =document.querySelector(".checkout_Subtotal");
+        var sub = (price*qty);
+        Subtotal.innerHTML = sub
+        }
+
+        
     </script>
 
 </body>

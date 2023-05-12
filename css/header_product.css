@@ -39,7 +39,7 @@
 
 .products_list {
     width: fit-content;
-    height: 600px;
+    height: 100vh;
     position: absolute;
     background-color: #010101;
     display: none;

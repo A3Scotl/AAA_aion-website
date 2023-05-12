@@ -90,32 +90,37 @@ function addToCard(key){
     reloadCard()
    
 }
-
+localStorage.getItem("myCart")
+localStorage.getItem("totalQty")
 let listCard = document.querySelector(".list");
 let total = document.querySelector(".checkout_Subtotal");
+console.log(localStorage.getItem('myCart'));
+
 function reloadCard(){
     let count = 0;
     let totalPrice = 0;
-    let x = localStorage.getItem("myCart")
     listCard.innerHTML = "";
     listCards.forEach((value, key)=>{
         totalPrice += value.price;
         count = count + value.quantity;
         if(value != null){
             let newDiv = document.createElement('tr');
-            newDiv.innerHTML = ` <div><img src="/img/${value.img[0]}"/></div>
+            newDiv.innerHTML = 
+            ` <div><img src="/img/${value.img[0]}"/></div>
             <div>${value.name}</div>
             <div>${value.price.toLocaleString()}</div>
          <div>
             <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
             <div class="count">${value.quantity}</div>
             <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
-        </div>`;
+        </div>`
+        ;
                 listCard.appendChild(newDiv);
                 
         }
        
     })
+    console.log(listCards)
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
     localStorage.setItem("myCart",JSON.stringify(listCards));
@@ -123,10 +128,12 @@ function reloadCard(){
     showDetails()
 
 }
+
 function changeQuantity(key, quantity){
     if(quantity == 0){
         delete listCards[key];
-    }else{
+    }
+    else{
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
@@ -135,7 +142,6 @@ function changeQuantity(key, quantity){
 function showDetails(key){
     listCard[key] = JSON.parse(JSON.stringify(products[key]));
     let sp = listCard[key]
-    console.log(sp);
     localStorage.setItem("sanpham",JSON.stringify(sp))
     window.location.href = "/html/detail.html"
 }

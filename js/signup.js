@@ -2,14 +2,13 @@ function signup(e) {
     event.preventDefault();
     var username = document.getElementById("username").value;
     var erUser = document.getElementById("errUser");
-    var rgexUsername = /^[a-zA-Z0-9]{6,}$/;
     var email = document.getElementById("email").value;
     var rgexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     //example@email.com/
     var erEmail = document.getElementById("errEmail");
     var password = document.getElementById("password").value;
     var rgexPass = /^.{8,}$/;
-    // 123456/;
+    // 12345678/;
     var erPass = document.getElementById("errPas");
     var cfpass = document.getElementById("cfpassword").value;
     var erCf = document.getElementById("errCf");
@@ -37,7 +36,6 @@ function signup(e) {
         }
         
     }
-    console.log(username)
     if(email!=""){
         if(!rgexEmail.test(email)){
             document.querySelector("#email").classList.add("err-input")
@@ -54,7 +52,7 @@ function signup(e) {
         if(!rgexPass.test(password)){
             document.querySelector("#password").classList.add("err-input")
             erPass.classList.add("err-text")
-            erPass.innerHTML = "Mật khẩu không hợp lệ!!!";
+            erPass.innerHTML = "Mật khẩu không hợp lệ!!!Phải từ 8 số trở lên";
         }
         else
        {

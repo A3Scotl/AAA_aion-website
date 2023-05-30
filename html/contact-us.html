@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/allHtml.css">
+    <link rel="stylesheet" href="/css/support.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>AAA - Contacts</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header_logo">
+            <div style="color: aliceblue;">AAA</div>
+            <span style="color: azure;">SUPPORT</span>
+        </div>
+        <div class="header_back" style="cursor: pointer;">
+            <div>Back to</div>
+            <span  >aaa.co</span>
+        </div>
+    </div>
+    <div class="search">
+        <div class="search_input">
+            <div class="input-group md-form form-sm form-1 pl-0">
+            <div class="input-group-prepend">
+              <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-pink"
+                  aria-hidden="true"></i></span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="ctn">
+        <div class="ctn_r1">
+          
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">VietNam</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+        </div>
+        <div class="ctn_r2_allProducts">
+        </div>
+    </div>
+    <div class="ft" style="background-color: black;">
+        <div class="ft_r1">
+            <div class="ft_r1_col1">
+                <p class="ft_r1_col1-logo">AAA.aion</p>
+                <p class="ft_r1_col1-txt">AAA designs headphones tuned to you. Bringing you closer to music with personalised sound.</p>
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">SHOP</p>
+                <a href="product_AAATrue-pro.html" class="ft_r1_col-link">AAATrue Pro</a>
+                <a href="product_AAATrue.html" class="ft_r1_col-link">AAATrue</a>
+                <a href="product_AAAphone.html" class="ft_r1_col-link">AAABuds 2</a>
+                <a href="product_AAAphone.html" class="ft_r1_col-link">AAAphone</a>
+                <a href="product_AAALoop.html" class="ft_r1_col-link">AAALoop</a>
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">INFO</p>
+                <a href="whyAAA.html" class="ft_r1_col-link">Why AAA?</a>
+                <a href="#" class="ft_r1_col-link">Shipping</a>
+                <a href="#" class="ft_r1_col-link">Returns</a>
+                <a href="#" class="ft_r1_col-link">Warranty</a>
+                <a href="#" class="ft_r1_col-link">Patents</a>
+
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">SUPPORT</p>
+                <a href="#" class="ft_r1_col-link">Hels Centre</a>
+                <a href="#" class="ft_r1_col-link">Contact Us</a>
+            </div>
+            <div class="ft_r1_col">
+                <p class="ft_r1_col-r1">SOCIALS</p>
+                <a href="https://www.instagram.com/" class="ft_r1_col-link">Instagram</a>
+                <a href="https://www.facebook.com/" class="ft_r1_col-link">Facebook</a>
+                <a href="https://www.youtube.com/" class="ft_r1_col-link">Youtube</a>
+                <a href="https://www.tidal.com/" class="ft_r1_col-link">Tidal</a>
+            </div>
+        </div>
+        <div class="ft_r2">
+            <p class="ft_r2-c1">Copyright © 2022 Nura Operations Pty Ltd. All rights reserved.</p>
+            <div class="ft_r2-c2">
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>Legal</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        let backHome = document.querySelector(".header_back")
+        backHome.addEventListener('click',()=>{
+            window.location.href = "/html/trang-chu.html"
+        })
+    </script>
+
+</body>
+</html>

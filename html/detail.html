@@ -79,7 +79,6 @@
         <div class="nav_r">
             <div class="nav_r_shopping">
                     <div class="shopping">Card</div>
-                    <span class="totalQty">[0]</span>
             </div>
             <div class="nav_r_cart">
                 <div class="header">
@@ -322,7 +321,6 @@
        
         localStorage.setItem("myCart",JSON.stringify(listCards))
        
- 
         function addToCard(){
             let count = 0;
             let totalPrice = 0;
@@ -343,10 +341,10 @@
         var price = document.querySelector(".price_item").value;
         var qty = document.querySelector(".qty_item").value;
         var Subtotal  =document.querySelector(".checkout_Subtotal");
-        var sub = (price*qty);
-        Subtotal.innerHTML = sub
+        Subtotal.innerHTML = sp.price.toLocaleString();
+        console.log(Subtotal)
+        alert("Add 1 product")
         }
-
         
     </script>
 

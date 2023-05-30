@@ -3,7 +3,7 @@ function login(e) {
     var username = document.getElementById("username").value;
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    var user = localStorage.getItem(username)
+    var user = localStorage.getItem("user")
     var data = JSON.parse(user);
     var rexname  = '/^[a-zA-Z0-9]{6,32}+$/';
     if (username == "" || email == "" || password == "")

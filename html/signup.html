@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/signup.css">
     <title>Sign Up</title>
+    <style>
+        span{
+            color: red;
+        }
+        label{
+            font-size: 20px;
+        }
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -14,24 +25,28 @@
         </div>
         <form onsubmit="signup()">
             <div class="input_field">
-                <input type="text" id="username" placeholder="User Name">
+                <label for="">User Name</label>
+                <input type="text" id="username" placeholder="an1234">
                 <span id="errUser">*</span>
             </div>
             <div class="input_field">
-                <input type="text" id="email" placeholder="Email">
+                <label for="">Gmail</label>
+                <input type="text" id="email" placeholder="example@email.com">
                 <span id="errEmail">*</span>
             </div>
             <div class="input_field">
-                <input type="password" id="password" placeholder="Password">
+                <label for="">Password</label>
+                <input type="password" id="password" placeholder="zxc/1234">
                 <span id="errPas">*</span>
             </div>
             <div class="input_field">
-                <input type="password" id="cfpassword" placeholder="Confirm Password">
+                <label for="">Comfirm Password</label>
+                <input type="password" id="cfpassword" placeholder="zxc/1234">
                 <span id="errCf">*</span>
             </div>
             <button id="btn-SignUp">Sign Up</button>
         </form>
-        <div class="back"><a href="trang-chu.html">Back to AAA</a></div>
+        <span class="back"><a href="trang-chu.html">Back to AAA</a></span>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script src="/js/signup.js"></script>

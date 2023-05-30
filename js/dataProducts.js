@@ -49,7 +49,9 @@ Shopping.addEventListener('click',()=>{
 closeShopping.addEventListener('click',()=>{
    body.classList.remove('open');
 })
+
 var listCards = [];
+
 function initApp(){
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
